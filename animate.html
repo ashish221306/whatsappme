@@ -1,68 +1,111 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Let's make animation in css3 </title>
     <meta charset="UTF-8">
     <meta name="description" content="want to make animated messages by css3 open this to see">
     <meta name="keywords" content="">
-    <link href='https://1.bp.blogspot.com/-mO78Z4iFuGs/Xhcsux53jVI/AAAAAAAAhDk/xhJEvNXhHhUntGKl7CA6dvbrnxhwm-MGwCNcBGAsYHQ/s320/IMG_20200109_162749-removebg-preview%2B%25281%2529.png' rel='icon' type='image/x-icon'/>
+    <link href='https://1.bp.blogspot.com/-mO78Z4iFuGs/Xhcsux53jVI/AAAAAAAAhDk/xhJEvNXhHhUntGKl7CA6dvbrnxhwm-MGwCNcBGAsYHQ/s320/IMG_20200109_162749-removebg-preview%2B%25281%2529.png' rel='icon' type='image/x-icon' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <style>
-        body{
-        background-image: linear-gradient(45deg, #159bce, transparent);
+        body,
+        .wrap {
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(45deg, #159bce, transparent);
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
         
-        background-size:cover;
-            background-repeat:none;
+        img {
+            margin-top: -20px;
         }
-        .box:hover {animation-play-state: paused;}
-        .box{padding: 40px;display: inline-block;height: 500px;width: 300px;animation: appear 0.7s infinite alternate;transition: all 1s ease-in;}
-        img{display:inline-block;text-align: center;padding: 40px;
-        animation: move 2s infinite alternate;
-         
+        
+        .box:hover {
+            animation-play-state: paused;
         }
-        h3{color:#ffff;font-weight:600}
-        @keyframes appear{
-            from{opacity: 0;}
-            to{opacity: 1;}
+        
+        .box {
+            padding: 40px;
+            display: inline-block;
+            height: 500px;
+            width: 300px;
+            animation: appear 0.7s infinite alternate;
+            transition: all 1s ease-in;
         }
-        @keyframes move{
-            
-            from{padding-left: 1%;}
-            to{padding-left: 20%;}
+        
+        img {
+            display: inline-block;
+            text-align: center;
+            padding: 40px;
+            animation: move 2s infinite alternate;
         }
-         
+        
+        h3 {
+            color: #ffff;
+            font-weight: 600
+        }
+        
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes move {
+            from {
+                transform: translateX(10px);
+            }
+            to {
+                transform: translateX(-110px);
+            }
+        }
+        
         @keyframes scalee {
-    50% {
-         transform:rotate3D(1.7,0,0);
-    }
-}
-        @media screen and (max-width:500px){
-            .box{width: 100%;}
-            .box h3{font-size: 20px}
-        })  
+            50% {
+                transform: rotate3D(1.7, 0, 0);
+            }
+        }
+        
+        @media screen and (max-width:500px) {
+            .box {
+                width: 100%;
+            }
+            .box h3 {
+                font-size: 20px
+            }
+        }
     </style>
 </head>
+
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6 col-xs-6 col-12">
-            <div class="box">
-    <h3>
-        want to make this type of animation 
-        contact me <a href="http://ashish221306.github.io/whatsappme">http://ashish221306.github.io/whatsappme</a>
-    </h3>
-</div>
-        </div>
-        <div class="col-sm-6 col-xs-6 col-12">
-            <img src="./ashishji-removebg-preview.png"  height="auto">
+    <div class="wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="box">
+                        <h3>
+                            want to make this type of animation contact me <a href="http://ashish221306.github.io/whatsappme">http://ashish221306.github.io/whatsappme</a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <img src="./ashishji-removebg-preview.png" height="auto">
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
 
 
 </body>
+
 </html>
